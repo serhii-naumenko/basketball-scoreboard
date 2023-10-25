@@ -7,7 +7,7 @@
   src: url('fonts/CursedTimerUlil-Aznm.ttf');
 }
 
-body, h3, p, button {
+body, h1, h2, p, button {
   margin: 0;
   padding: 0;
 }
@@ -16,17 +16,36 @@ body {
   margin-top: 10px;
 }
 
-.container {
+.main-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   width: 575px;
-  padding: 68px 85px;
+  padding: 30px 85px 68px;
   background: #1B244A;
   margin: 0 auto;
   text-align: center;
 }
 
-h3 {
+h2 {
+  color: whitesmoke;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+#time {
+  color: #3fb2dc;
+  font-family: Cursed Timer ULiL;
+  font-size: 60px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  border-bottom: 3px solid black;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
   color: #EEE;
   font-family: 'Verdana', sans-serif;
   font-size: 40px;
@@ -47,7 +66,6 @@ h3 {
   color: #F94F6D;
   font-family: Cursed Timer ULiL;
   font-size: 90px;
-  font-style: normal;
   font-weight: 400;
   line-height: 127px;
 }
@@ -55,6 +73,7 @@ h3 {
 .buttons-group {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .btn {
@@ -80,4 +99,37 @@ h3 {
 .btn:active {
   border: 2px solid rgb(213, 16, 16);
   color: rgb(213, 16, 16);
+}
+
+#btn-start {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 7px;
+  width: 300px;
+  height: 60px;
+  background-color: #bacceb;
+  color: #022dc7;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+#btn-start:hover {
+  background-color: #022dc7;
+  color: #F94F6D;
+}
+
+#btn-start:disabled {
+  background-color: gray;
+  cursor: auto;
+  color: #022dc7;
+}
+
+.timer-corrector {
+  width: 130px;
+  height: 35px;
+  margin: 0 7px;
+  border-radius: 5px;
+  cursor: pointer;
 }
