@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css"/>
+    <title>Basketball scorecard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+          <h3>HOME</h3>
+          <div class="scoreboard">
+            <p class="score" id="scoreHome">0</p>
+          </div>
+          <div class="buttons-group">
+            <button
+              type="button"
+              class="btn"
+              onclick="increment('home', 1)"
+            >
+              +1
+            </button>
+            <button
+              type="button"
+              class="btn"
+              onclick="increment('home', 2)"
+            >
+              +2
+            </button>
+            <button
+              type="button"
+              class="btn"
+              onclick="increment('home', 3)"
+            >
+              +3
+            </button>
+          </div>
+      </div>
+      <div>
+          <h3>GUEST</h3>
+          <div class="scoreboard">
+            <p class="score" id="scoreGuest">0</p>
+          </div>
+          <div class="buttons-group">
+            <button
+              type="button"
+              class="btn"
+              onclick="increment('guest', 1)"
+            >
+              +1
+            </button>
+            <button
+              type="button"
+              class="btn"
+              onclick="increment('guest', 2)"
+            >
+              +2
+            </button>
+            <button
+              type="button"
+              class="btn"
+              onclick="increment('guest', 3)"
+            >
+              +3
+            </button>
+          </div>
+      </div>
+    </div>
+    <script type="application/javascript" src="/main.js"></script>
+  </body>
+</html>

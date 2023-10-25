@@ -1,0 +1,12 @@
+{
+  "name": "basketball-scoreboard",
+  "version": "1.0.0",
+  "description": "Scoreboard for a basketball match with the opportunity to set and change score and amount of fouls, control time.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["gh-pages"],
+  "author": "Serhii Naumenko",
+  "license": "ISC"
+}
