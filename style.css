@@ -133,3 +133,16 @@ h1 {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.timer-corrector:disabled {
+  background-color: gray;
+  cursor: auto;
+}
+
+.pause {
+  background-color: rgb(228, 153, 146);
+}
+
+.continue {
+  background-color: rgb(146, 228, 206);
+}
