@@ -5,6 +5,7 @@ const buttonStartEl = document.getElementById('btn-start')
 const pauseEl = document.getElementById('pause');
 const continueEl = document.getElementById('continue');
 const mainContainerEl = document.getElementById('main-container');
+const buttonGoalEl = document.getElementsByClassName('btn-goal');
 let period;
 
 let scoreHome = 0;
@@ -19,6 +20,8 @@ function increment(side, amount) {
     scoreGuest += amount;
     guestEl.textContent = scoreGuest;
   }
+  homeEl.style.color = scoreHome > scoreGuest ? '#e8133a' : '#F94F6D';
+  guestEl.style.color = scoreHome < scoreGuest ? '#e8133a' : '#F94F6D';
 }
 
 function startTimer() {
@@ -28,6 +31,7 @@ function startTimer() {
   }, 1000);
   pauseEl.disabled = false;
   continueEl.disabled = true;
+  [...buttonGoalEl].forEach(el => el.disabled = false);
   buttonStartEl.textContent = 'Restart timer';
 }
 
@@ -50,6 +54,7 @@ function pauseTimer() {
   clearInterval(period);
   pauseEl.disabled = true;
   continueEl.disabled = false;
+  [...buttonGoalEl].forEach(el => el.disabled = true);
 }
 
 function finalResult() {

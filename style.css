@@ -138,6 +138,14 @@ body {
   color: rgb(213, 16, 16);
 }
 
+.btn-goal:disabled, .btn-goal:disabled:hover,
+.btn-goal:disabled:active {
+  background-color: grey;
+  cursor: auto;
+  color: #9AABD8;
+  border: 2px solid #9AABD8;
+}
+
 #btn-start {
   display: block;
   margin: 0 auto;
