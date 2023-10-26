@@ -4,6 +4,7 @@ const timeEl = document.getElementById('time');
 const buttonStartEl = document.getElementById('btn-start')
 const pauseEl = document.getElementById('pause');
 const continueEl = document.getElementById('continue');
+const mainContainerEl = document.getElementById('main-container');
 let period;
 
 let scoreHome = 0;
@@ -27,12 +28,11 @@ function startTimer() {
   }, 1000);
   pauseEl.disabled = false;
   continueEl.disabled = true;
-  buttonStartEl.textContent = 'The game is going';
-  buttonStartEl.style.color = '#022dc7';
+  buttonStartEl.textContent = 'Restart timer';
 }
 
 function gameStart() {
-  buttonStartEl.disabled = true;
+  clearInterval(period);
   time = 0;
   timeEl.textContent = '00:00';
   startTimer();
@@ -50,6 +50,20 @@ function pauseTimer() {
   clearInterval(period);
   pauseEl.disabled = true;
   continueEl.disabled = false;
-  buttonStartEl.textContent = 'P A U S E';
-  buttonStartEl.style.color = 'red';
+}
+
+function finalResult() {
+  clearInterval(period);
+  const winner = scoreHome > scoreGuest
+    ? 'Winner is HOME!'
+    : scoreHome < scoreGuest
+      ? 'Winner is GUEST!'
+      : 'DEAD HEAT';
+  const result = scoreHome + ' : ' + scoreGuest;
+  mainContainerEl.innerHTML = `
+    <h2 class="winner">${winner}</h2>
+    <h3 class="final-score">Score: ${result}</h3>
+    <a href="../index.html" class="return-start">Start new game</a>
+  `
+  mainContainerEl.setAttribute('style', "height: 500px; justify-content: center;");
 }

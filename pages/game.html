@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css"/>
+    <title>Basketball scorecard</title>
+  </head>
+  <body>
+    <div id="main-container">
+      <h2 class="time-title">TIME</h2>
+      <p id="time">00:00</p>
+      <div class="score-container">
+        <div>
+          <h1 class="player">HOME</h1>
+          <div class="scoreboard">
+            <p class="score" id="scoreHome">0</p>
+          </div>
+          <div class="buttons-group">
+            <button
+              type="button"
+              class="btn-goal"
+              onclick="increment('home', 1)"
+            >
+              +1
+            </button>
+            <button
+              type="button"
+              class="btn-goal"
+              onclick="increment('home', 2)"
+            >
+              +2
+            </button>
+            <button
+              type="button"
+              class="btn-goal"
+              onclick="increment('home', 3)"
+            >
+              +3
+            </button>
+          </div>
+        </div>
+        <div>
+            <h1 class="player">GUEST</h1>
+            <div class="scoreboard">
+              <p class="score" id="scoreGuest">0</p>
+            </div>
+            <div class="buttons-group">
+              <button
+                type="button"
+                class="btn-goal"
+                onclick="increment('guest', 1)"
+              >
+                +1
+              </button>
+              <button
+                type="button"
+                class="btn-goal"
+                onclick="increment('guest', 2)"
+              >
+                +2
+              </button>
+              <button
+                type="button"
+                class="btn-goal"
+                onclick="increment('guest', 3)"
+              >
+                +3
+              </button>
+            </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        id="btn-start"
+        onclick="gameStart()"
+      >
+        Start timer
+      </button>
+      <div class="timer-corrector-group">
+        <button
+          type="button"
+          class="timer-corrector pause"
+          id="pause"
+          onclick="pauseTimer()"
+          disabled
+        >
+          Pause timer
+        </button>
+        <button
+          type="button"
+          class="timer-corrector continue"
+          id="continue"
+          onclick="startTimer()"
+          disabled
+        >
+          Continue timer
+        </button>
+      </div>
+      <button
+        type="button"
+        class="game-over"
+        onclick="finalResult()"
+      >
+        Game over
+      </button>
+    </div>
+    <script src="../main.js"></script>
+  </body>
+</html>
