@@ -1,2 +1,4 @@
+[DEMO](https://basketball-scorecard1.netlify.app/)
+
 # basketball-scoreboard
- Scoreboard for a basketball match with the opportunity to set and change score and amount of fouls, control time.
+ Scoreboard for a basketball match with the opportunity to set and change score, control time.
