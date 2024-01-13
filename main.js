@@ -67,7 +67,7 @@ function finalResult() {
   const result = scoreHome + ' : ' + scoreGuest;
   mainContainerEl.innerHTML = `
     <h2 class="winner">${winner}</h2>
-    <h3 class="final-score">Score: ${result}</h3>
+    <h3 class="final-score">Score: &nbsp;&nbsp;${result}</h3>
     <a href="../index.html" class="return-start">Start new game</a>
   `
   mainContainerEl.setAttribute('style', "height: 500px; justify-content: center;");
